@@ -1,0 +1,60 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.wrap{
+	width: 800px;
+	margin: 20px auto;
+}
+.nav{
+	float: left;
+	width: 100px;
+	
+}
+.nav ul{
+	text-align: center;
+	padding-top: 15px;
+}
+.nav ul li{
+	line-height: 20px;
+	margin-bottom: 20px;
+	list-style: none;
+}
+.nav ul li a {
+	text-decoration: none;
+	padding: 5px;
+	line-height: 20px;
+}
+.nav ul li a:hover{
+	text-decoration: underline;
+	color: red;
+}
+
+.content-body{
+	width: 600px;
+	float: right;
+}
+.title{
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+.articleinfo{
+	margin-top: 5px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: normal;
+}
+.articleinfo .author{
+	margin-right: 10px;
+}
+.article{
+	padding: 10px;
+}
+.articleBody{
+	/*height:100px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	height: 100px;*/
+}
