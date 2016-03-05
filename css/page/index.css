@@ -1,0 +1,60 @@
+.wrap{
+	max-width: 400px;
+	margin: 100px auto;
+	text-align: center;
+}
+
+.wrap .img{
+	margin: 0 auto 50px auto;
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+	overflow: hidden;
+	background: url(../../images/avator.jpg) no-repeat center;
+}
+.wrap h1{
+	font-size: 30px;
+	color: black;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.wrap p{
+	font-size: 15px;
+	line-height: 23px;
+	word-spacing: 5px;
+}
+.wrap span {
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+	margin: 15px 0;
+	padding-left:22px;
+	background: url(../../images/address.png) no-repeat 0px 0px; 
+}
+.wrap .nav{
+	margin-left: 10px;
+}
+.wrap .nav li{
+	float: left;
+	margin-right: 10px;
+}
+.wrap .nav .last_nav{
+	margin-right: 0px;
+}
+.wrap .nav li a{
+	display: inline-block;
+	border: 1px solid black;
+	padding:4px;
+	box-shadow: 2px 2px 2px #fff;
+	color: black;
+	border-radius: 3px;
+
+}
+.wrap .nav li a:hover{
+	border: none;
+	padding: 5px;
+	font-size: 20px;
+	color: red;
+	text-shadow:1px 1px 1px red;
+}
