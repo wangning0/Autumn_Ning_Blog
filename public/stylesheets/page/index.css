@@ -11,6 +11,12 @@
 	border-radius: 75px;
 	overflow: hidden;
 	background: url(../../images/avator.jpg) no-repeat center;
+	-webkit-transition:all 1s ease-in-out;
+	-moz-transition:all 1s ease-in-out;
+}
+.wrap .img:hover{
+	-webkit-transform:rotate(360deg) skew(0deg) scale(1.5) translate(100px,0);
+	-moz-transform:rotate(360deg) skew(s0deg)scale(1.5) translate(100px,0)
 }
 .wrap h1{
 	font-size: 30px;
