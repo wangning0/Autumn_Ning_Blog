@@ -34,7 +34,20 @@ router.get('/getAllImgs', function(req, res, next) {
 	})
 });
 router.post('/postArticle',function(req,res,next){
-	console.log(req.body);
+	db.postArticle(req.body,function(err,doc){
+		if( err ){
+			res.send({
+				status: 1,
+				msg: err
+			});
+		} else {
+			res.send({
+				status:0,
+				msg:'',
+				body:doc
+			})
+		}
+	})
 })
 router.post('/uploadImg',function(req,res,next){
 	var form = new formidable.IncomingForm();

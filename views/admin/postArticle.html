@@ -6,7 +6,7 @@
 	<link rel="shortcut icon " href="/images/avator.ico">
 	<link rel="stylesheet" href="/stylesheets/common/common.css">
 	<link rel="stylesheet" href="/stylesheets/common/reset.css">
-	<link rel="stylesheet" href="http://lab.lepture.com/editor/editor.css" />
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">
 	<style>
 		.postArticle{border:1px solid #DDDDE3;}
 		.imgList{margin-bottom: 20px;}
@@ -36,10 +36,10 @@
 				</div>
 			</div>
 			<div class="postArticle">
-				<p style="font-size:15px;">Title:<input type="text" placeholder="Title" ng-model="title" style="width:200px;height:30px;font-size:15px;padding:4px;border-radius:4px;outline:none;border:1px solid #DDDDE3;"></p>
+				<p style="font-size:15px;">Title:<input type="text" placeholder="Title" ng-model="title" style="width:500px;height:30px;font-size:15px;padding:4px;border-radius:4px;outline:none;border:1px solid #DDDDE3;"></p>
 				<textarea></textarea>
 			</div>
-			<button ng-click="submit()" style="float:right;width:50px;height:20px;">提交</button>
+			<button ng-click="submit()" style="float:right;width:50px;height:25px;">提交</button>
 		</div>
 	</div>
 	<div class="footer">
@@ -47,8 +47,8 @@
 	</div>
 	<script type="text/javascript" src="/javascripts/lib/angular.js"></script>
 	<script type="text/javascript" src="/javascripts/page/controllers/postArticle.js"></script>
-	<script type="text/javascript" src="http://lab.lepture.com/editor/editor.js"></script>
-	<script type="text/javascript" src="http://lab.lepture.com/editor/marked.js"></script>
+	<script src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
+	<script src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
 	<script>
 		var editor = new Editor();
 		editor.render();

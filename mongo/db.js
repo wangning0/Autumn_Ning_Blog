@@ -57,18 +57,34 @@ module.exports = {
 			}
 		})
 	},
-	postArticle:function(article,cb){
+	postArticle:function(articleInfo,cb){
 		var Article = dbModels.getModel('article');
 		var date = new Date();
+		var addZero = function (num){
+			if( num < 10 ){
+				return '0'+''+num;
+			} else{
+				return num;
+			}
+		}
 		var time = {
 			date:date,
 			year:date.getFullYear(),
-			month:date.getFullYear()+'-'+(date.getMonth()+1),
-			day:date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate(),
+			month:date.getFullYear()+'-'+addZero((date.getMonth()+1)),
+			day:date.getFullYear()+'-'+addZero((date.getMonth()+1))+'-'+addZero(date.getDate()),
 			minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
 		};
 		var articleObj = {
-		}
-		this.createDoc()
+			'title':articleInfo.title,
+			'article':articleInfo.article,
+			'time':time.day
+		};
+		this.createDoc(Article,articleObj,function(err,doc){
+			if( err ){
+				cb('保存文章失败:'+err);
+			} else {
+				cb(null,doc);
+			}
+		})
 	}
 }
