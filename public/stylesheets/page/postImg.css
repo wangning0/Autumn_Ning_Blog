@@ -1,0 +1,25 @@
+.admin_post{
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	position: relative;
+}
+.admin_post p{
+	position: absolute;
+	top: 179px;
+	left: 130px;
+	color: gray;
+	font-size: 30px;
+	text-align: center;
+}
+.admin_post .uploadImg{
+	width: 400px;
+	height: 400px;
+	border:1px dashed gray;
+}
+.admin_post .uploadImg .uploadFile{
+	width: 100%;
+	height: 100%;
+	opacity: 0.0;
+}
+

@@ -1,0 +1,20 @@
+.login_container{
+	width: 400px;
+	margin: 200px auto;
+	height: 200px;
+	text-align: center;
+}
+.login_container input{
+	border:2px solid red;
+	outline: none;
+	margin: 10px;
+	padding: 10px;
+	width: 80%;
+	border-radius: 10px;
+	color: black;
+	font-size: 20px;
+	text-shadow:1px 1px 1px blue;
+}
+input[type="submit"]{
+	opacity: 0;
+}

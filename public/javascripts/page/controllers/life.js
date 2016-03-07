@@ -1,13 +1,13 @@
 angular.module('myApp',[]);
 
 angular.modele('myApp')
-	.controller('blogCtrl', ['$scope','$http', function ($scope,$http) {
+	.controller('lifeCtrl', ['$scope','$http', function ($scope,$http) {
 		$http({
-			url:'/getBlog',
+			url:'/getLifeArticle',
 			method:'GET'
 		}).success(function(res){
 			if( res.status == 0 ){
-				$scope.blogLists = res.body;
+				$scope.lifeArticles = res.body;
 			}
 		})
 	}])

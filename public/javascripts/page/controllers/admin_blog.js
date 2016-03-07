@@ -1,7 +1,7 @@
 angular.module('myApp',[]);
 
 angular.modele('myApp')
-	.controller('blogCtrl', ['$scope','$http', function ($scope,$http) {
+	.controller('adminBlogsCtrl', ['$scope','$http', function ($scope,$http) {
 		$http({
 			url:'/getBlog',
 			method:'GET'
