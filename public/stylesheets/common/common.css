@@ -72,8 +72,7 @@
 	cursor: pointer;
 }
 .header .nav li a:hover{
-	color: yellow;
-	text-shadow:2px 2px 1px black;
+	text-shadow:1px 1px 1px #49BC9C;
 	cursor: pointer;
 	-webkit-transform:rotate(360deg) skew(0deg) scale(1.0) translate(10px,0);
 	-moz-transform:rotate(360deg) skew(0deg) scale(1.0) translate(10px,0);
