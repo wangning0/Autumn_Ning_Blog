@@ -16,6 +16,7 @@
 	width: 400px;
 	height: 400px;
 	border:1px dashed gray;
+	background-size:100% 100%; 
 }
 .admin_post .uploadImg .uploadFile{
 	width: 100%;

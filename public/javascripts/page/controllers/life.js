@@ -1,6 +1,6 @@
 angular.module('myApp',[]);
 
-angular.modele('myApp')
+angular.module('myApp')
 	.controller('lifeCtrl', ['$scope','$http', function ($scope,$http) {
 		$http({
 			url:'/getLifeArticle',

@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
 
+var db = require('./mongo/db');
+db.openDb();
 var routes = require('./routes/index');
 var admin = require('./routes/admin');
 var app = express();

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Autumen_Ning's Blog</title>
+	<link rel="shortcut icon " href="/images/avator.ico">
+	<link rel="stylesheet" href="/stylesheets/common/common.css">
+	<link rel="stylesheet" href="/stylesheets/common/reset.css">
+	<link rel="stylesheet" href="http://lab.lepture.com/editor/editor.css" />
+	<style>
+		.postArticle{border:1px solid #DDDDE3;}
+		.imgList{margin-bottom: 20px;}
+		.imgList div{display: inline-block; position: relative; margin-bottom: 30px;}
+		.imgList div img{width:180px;height: 200px;border:none;margin-left: 3px;text-align: center;display: inline-block;}
+		.imgList div span{position: absolute;font-size: 10px;left: 5px;}
+	</style>
+</head>
+<body>
+	<iframe name="newWindow" id="newWindow" style="display:none;"></iframe>
+	<div class="header">
+		<ul class="nav clear admin">
+			<img src="/images/avator.jpg" alt="">
+			<li class="first_nav"><a href="/">Home</a></li>
+			<li><a href="/admin/blog">Blogs</a></li>
+			<li><a href="/admin/postImg">Post Img</a></li>
+			<li><a href="/admin/postArticle">Post Article</a></li>
+			<li><a href="/admin/logout">Logout</a></li>
+		</ul>
+	</div>
+	<div class="container" style="width:740px;" ng-controller="imgCtrl">
+		<div class="mod_archive_item">
+			<div class="imgList">
+				<div ng-repeat="img in imgLists">
+					<img ng-src="{{img.imgSrc}}">
+					<span ng-bind="img.imgSrc"></span>
+				</div>
+			</div>
+			<div class="postArticle">
+				<p style="font-size:15px;">Title:<input type="text" placeholder="Title" ng-model="title" style="width:200px;height:30px;font-size:15px;padding:4px;border-radius:4px;outline:none;border:1px solid #DDDDE3;"></p>
+				<textarea></textarea>
+			</div>
+			<button ng-click="submit()" style="float:right;width:50px;height:20px;">提交</button>
+		</div>
+	</div>
+	<div class="footer">
+		<p> Copyright ©2016 Crazy uncle Powered by <a href="https://github.com/wangning0">Autumn_Ning</a></p>
+	</div>
+	<script type="text/javascript" src="/javascripts/lib/angular.js"></script>
+	<script type="text/javascript" src="/javascripts/page/controllers/postArticle.js"></script>
+	<script type="text/javascript" src="http://lab.lepture.com/editor/editor.js"></script>
+	<script type="text/javascript" src="http://lab.lepture.com/editor/marked.js"></script>
+	<script>
+		var editor = new Editor();
+		editor.render();
+	</script>
+</body>
+</html>

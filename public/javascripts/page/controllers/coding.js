@@ -1,6 +1,6 @@
 angular.module('myApp',[]);
 
-angular.modele('myApp')
+angular.module('myApp')
 	.controller('codingCtrl', ['$scope','$http', function ($scope,$http) {
 		$http({
 			url:'/getCodingArticle',
