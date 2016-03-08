@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var db = require('../mongo/db');
 /* 实现网页路由 */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -21,4 +21,19 @@ router.get('/about',function(req,res,next){
 	res.render('about');
 });
 
+router.get('/getBlog',function(req,res,next){
+	db.getBlogs(function(err,docs){
+		if( err ){
+			res.send({
+			status:1,
+			msg:err
+			})
+		} else {
+			res.send({
+			status:0,
+			body:docs
+			})
+		}
+	})
+});	
 module.exports = router;

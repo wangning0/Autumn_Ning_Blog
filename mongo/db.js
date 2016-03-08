@@ -1,6 +1,7 @@
 var dbModels = require('./dbModels');
 var mongoose = require('mongoose');
-var debug = require('debug')('Autumn_Ning_Blog:db')
+var debug = require('debug')('Autumn_Ning_Blog:db');
+var async = require('async')
 //连接数据库
 module.exports = {
 	openDb:function(){
@@ -57,9 +58,55 @@ module.exports = {
 			}
 		})
 	},
+	getYear:function(cb){
+		var Year = dbModels.getModel('years');
+		var yearArr = [];
+		this.findDoc(Year,{},function(err,docs){
+			if( err ){
+				cb('获取年份列表失败'+err);
+			} else {
+				for (var i = 0; i < docs.length; i++) {
+					yearArr.push(docs[i].year);
+				}
+				cb(null,yearArr);
+			}
+		}) 
+	},
+	getBlogs:function(cb){
+		var Article = dbModels.getModel('article');
+		var that = this;
+		var blogsInfo = {};
+		this.getYear(function(err,docs){
+			if( err ){
+				cb(err);
+				return;
+			} else{
+				async.eachSeries(docs, function(item, next) {
+					that.findDoc(Article, {
+						year: item
+					}, function(err, doc) {
+						if (err) {
+							cb(err);
+							return;
+						} else {
+							blogsInfo[item] = doc;
+							console.log(1);
+							console.log(!next());
+							next(err);
+						}
+					})
+				}, function(err) {
+					//console.log(2);
+					cb(err,blogsInfo);
+				})
+			}
+		}) 
+	},
 	postArticle:function(articleInfo,cb){
 		var Article = dbModels.getModel('article');
+		var Year = dbModels.getModel('years');
 		var date = new Date();
+		var that = this;
 		var addZero = function (num){
 			if( num < 10 ){
 				return '0'+''+num;
@@ -75,10 +122,30 @@ module.exports = {
 			minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
 		};
 		var articleObj = {
+			'year':''+time.year,
 			'title':articleInfo.title,
 			'article':articleInfo.article,
 			'time':time.day
 		};
+
+		this.checkRepeat(Year, {
+			year: '' + time.year
+		}, function(err, doc) {
+			if (err) {
+				console.log('年份保存失败');
+			} else if (!doc) {
+				that.createDoc(Year, {
+					year: '' + time.year
+				}, function(err, doc) {
+					if (err) {
+						console.log('年份保存失败');
+					}
+				})
+			} else {
+				console.log('年份已存在');
+			}
+		});
+		
 		this.createDoc(Article,articleObj,function(err,doc){
 			if( err ){
 				cb('保存文章失败:'+err);

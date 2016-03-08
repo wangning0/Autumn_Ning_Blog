@@ -3,8 +3,12 @@ module.exports = {
 		imgSrc:{type:String}
 	},
 	article:{
+		year:{type:String},
 		title:{type:String},
 		time:{type:String},
 		article:{type:String}
+	},
+	years:{
+		year:{type:String}
 	}
 }
