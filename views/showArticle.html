@@ -18,18 +18,14 @@
 			<li><a href="/admin/logout">Logout</a></li>
 		</ul>
 	</div>
-	<div class="admin container" ng-controller="adminBlogsCtrl">
-		<div class="mod_archive_item" ng-repeat="blogList in blogLists">
-			<div class="mod_archive_year" ng-bind="blogList[0].year"></div>
-			<ul class="mod_archive_list">
-				<li ng-repeat="blogInfo in blogList"><span class="triangle"></span><span class="time" ng-bind="blogInfo.time"></span> — <a ng-href="/blog/showBlog/{{blogInfo._id}}" ng-bind="blogInfo.title"></a><a ng-href="/blog/getOneArticle?id={{blogInfo._id}}" style="margin-left:4px;font-size:18px;color:blue;">修改</a><a ng-href="/blog/delete?id={{blogInfo._id}}" style="margin-left:4px;font-size:18px;color:red;">删除</a></li>
-			</ul>
+	<div class="admin container">
+		<div class="mod_archive_item" id="mod_archive_item">
+			
 		</div>
 	</div>
 	<div class="footer">
 		<p> Copyright ©2016 Crazy uncle Powered by <a href="https://github.com/wangning0">Autumn_Ning</a></p>
 	</div>
-	<script type="text/javascript" src="/javascripts/lib/angular.js"></script>
-	<script type="text/javascript" src="/javascripts/page/controllers/admin_blog.js"></script>
+	<script type="text/javascript" src="/javascripts/page/showArticle.js"></script>
 </body>
 </html>

@@ -34,6 +34,7 @@ router.get('/getAllImgs', function(req, res, next) {
 	})
 });
 router.post('/postArticle',function(req,res,next){
+	console.log(req.body);
 	db.postArticle(req.body,function(err,doc){
 		if( err ){
 			res.send({

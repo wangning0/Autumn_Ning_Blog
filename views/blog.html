@@ -21,31 +21,10 @@
 		</ul>
 	</div>
 	<div class="container" ng-controller="blogCtrl">
-		<div class="mod_archive_item">
-			<div class="mod_archive_year">2016</div>
+		<div class="mod_archive_item" ng-repeat="blogList in blogLists">
+			<div class="mod_archive_year" ng-bind="blogList[0].year"></div>
 			<ul class="mod_archive_list">
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-			</ul>
-		</div>
-		<div class="mod_archive_item">
-			<div class="mod_archive_year">2015</div>
-			<ul class="mod_archive_list">
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-			</ul>
-		</div>
-		<div class="mod_archive_item">
-			<div class="mod_archive_year">2014</div>
-			<ul class="mod_archive_list">
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
-				<li><span class="triangle"></span><span class="time">2016-03-05</span> — <a href="#">80后少帅败光山西最大民企，一个经典的接班失败案例</a></li>
+				<li ng-repeat="blogInfo in blogList"><span class="triangle"></span><span class="time" ng-bind="blogInfo.time"></span> — <a ng-href="/blog/getOneArticle?id={{blogInfo._id}}" ng-bind="blogInfo.title"></a></li>
 			</ul>
 		</div>
 	</div>

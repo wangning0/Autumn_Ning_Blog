@@ -28,6 +28,11 @@ module.exports = {
 			cb(err,docs);
 		})
 	},
+	deleteDoc:function(model,infoObj,cb){
+		model.remove(infoObj,function(err,docs){
+			cb(err,docs);
+		})
+	},
 	saveImgUrl:function(info,cb){
 		var that = this;
 		var Img = dbModels.getModel('img');
@@ -72,16 +77,39 @@ module.exports = {
 			}
 		}) 
 	},
+	getOneArticle:function(infoObj,cb){
+		var Article = dbModels.getModel('article');
+		this.findDoc(Article,infoObj,function(err,doc){
+			if( err ){
+				cb('获取文章错误'+err);
+			} else {
+				cb(null,doc);
+			}
+		})
+	},
+	deleteOneArticle:function(infoObj,cb){
+		var Article = dbModels.getModel('article');
+		this.deleteDoc(Article,infoObj,function(err,doc){
+			if( err ){
+				cb('删除文章出错'+err);
+			} else {
+				cb(null,doc);
+			}
+		})
+	},
 	getBlogs:function(cb){
 		var Article = dbModels.getModel('article');
 		var that = this;
-		var blogsInfo = {};
+		var blogsInfo = [];
 		this.getYear(function(err,docs){
 			if( err ){
 				cb(err);
 				return;
 			} else{
-				async.eachSeries(docs, function(item, next) {
+				docs.sort(function (a,b){
+					return b-a;
+				});
+				async.eachOfSeries(docs, function(item,index,next) {
 					that.findDoc(Article, {
 						year: item
 					}, function(err, doc) {
@@ -89,18 +117,27 @@ module.exports = {
 							cb(err);
 							return;
 						} else {
-							blogsInfo[item] = doc;
-							console.log(1);
-							console.log(!next());
+							blogsInfo[index] = doc;
 							next(err);
 						}
 					})
 				}, function(err) {
-					//console.log(2);
-					cb(err,blogsInfo);
+					process.nextTick(function(){
+						cb(err,blogsInfo)
+					})
 				})
 			}
 		}) 
+	},
+	getSectionArticle:function(type,cb){
+		var Article = dbModels.getModel('article');
+		this.findDoc(Article,{tag:type},function(err,docs){
+			if( err ){
+				cb('读取类型'+type+'的文章出错'+err);
+			} else {
+				cb(null,docs);
+			}
+		})
 	},
 	postArticle:function(articleInfo,cb){
 		var Article = dbModels.getModel('article');
@@ -122,6 +159,7 @@ module.exports = {
 			minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
 		};
 		var articleObj = {
+			'tag':articleInfo.tag,
 			'year':''+time.year,
 			'title':articleInfo.title,
 			'article':articleInfo.article,
