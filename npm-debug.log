@@ -7,7 +7,7 @@
 6 silly lifecycle Autumn_Ning_Blog@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle Autumn_Ning_Blog@0.0.0~start: Autumn_Ning_Blog@0.0.0
 8 verbose lifecycle Autumn_Ning_Blog@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle Autumn_Ning_Blog@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/WangNing/Desktop/item/blog/node_modules/.bin:/usr/local/bin:/usr/local/mongodb/mongodb-osx-x86_64-3.0.7/bin:/usr/local/mysql/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/WangNing/Downloads/apache-maven-3.3.9/bin
+9 verbose lifecycle Autumn_Ning_Blog@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/WangNing/Desktop/item/blog/node_modules/.bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
 10 verbose lifecycle Autumn_Ning_Blog@0.0.0~start: CWD: /Users/WangNing/Desktop/item/blog
 11 silly lifecycle Autumn_Ning_Blog@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle Autumn_Ning_Blog@0.0.0~start: Returned: code: 1  signal: null

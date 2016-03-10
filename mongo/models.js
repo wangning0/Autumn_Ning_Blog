@@ -11,5 +11,9 @@ module.exports = {
 	},
 	years:{
 		year:{type:String}
+	},
+	user:{
+		name:{type:String},
+		password:{type:String}
 	}
 }

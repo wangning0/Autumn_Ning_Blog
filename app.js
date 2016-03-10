@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+var mongoose = require('mongoose');
 
 var db = require('./mongo/db');
 db.openDb();
@@ -23,7 +26,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(session({
+  cookie:{maxAge:1000*60*10},
+  resave:true,
+  saveUninitialized:true,
+  secret:'blog',
+  key:'blog',
+  store:new MongoStore({
+    mongooseConnection:mongoose.connection
+  })
+}));
 app.use('/', routes);
 app.use('/admin',admin);
 // catch 404 and forward to error handler

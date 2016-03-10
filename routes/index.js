@@ -4,6 +4,7 @@ var db = require('../mongo/db');
 var markdown = require('markdown').markdown;
 /* 实现网页路由 */
 router.get('/', function(req, res, next) {
+  req.session.user = null;
   res.render('index');
 });
 router.get('/blog',function(req,res,next){

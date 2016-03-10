@@ -2,22 +2,50 @@ var express = require('express');
 var formidable = require('formidable');
 var fs = require('fs');
 var db = require('../mongo/db');
-
+var encrypt = require('../cryptoHash/encrypt');
+var checkAuthor = require('./checkAuthor');
 var router = express.Router();
+
 
 router.get('/login',function(req,res,next){
 	res.render('admin/login');
 });
+router.post('/login',function(req,res,next){
+	var password = req.body.password;
+	password = encrypt.encrypt(password);
+	var infoObj = {
+		name : req.body.name,
+		password : password
+	}
+	db.checkUserInfo(infoObj,function(err,doc){
+		if( err || !(doc.length)){
+			console.log(doc);
+			res.redirect('/admin/login');
+		} else if(doc.length){
+			req.session.user = req.body.name;
+			res.redirect('/admin/blog');
+		}
+	})
+});
+router.get('/logout',function(req,res,next){
+	checkAuthor(req,res);
+	req.session.user == null;
+	res.redirect('/');
+})
 router.get('/postImg',function(req,res,next){
+	checkAuthor(req,res);
 	res.render('admin/postImg');
 });
 router.get('/postArticle',function(req,res,next){
+	checkAuthor(req,res);
 	res.render('admin/postArticle');
 });
 router.get('/blog',function(req,res,next){
+	checkAuthor(req,res);
 	res.render('admin/blogs');
 });
 router.get('/getAllImgs', function(req, res, next) {
+	checkAuthor(req,res);
 	db.getImgs(function(err, docs) {
 		if (err) {
 			res.send({
@@ -33,7 +61,14 @@ router.get('/getAllImgs', function(req, res, next) {
 		}
 	})
 });
+/*router.get('/register',function(req,res,next){	
+	db.register({name:'Autumn_Ning',password:'5a0c78c6611d08aee5e449e56de847653803b176'},function(){
+		
+	})
+});*/
+
 router.post('/postArticle',function(req,res,next){
+	checkAuthor(req,res,next);
 	console.log(req.body);
 	db.postArticle(req.body,function(err,doc){
 		if( err ){
@@ -51,6 +86,7 @@ router.post('/postArticle',function(req,res,next){
 	})
 })
 router.post('/uploadImg',function(req,res,next){
+	checkAuthor(req,res,next);
 	var form = new formidable.IncomingForm();
 	form.uploadDir = 'public/avator/';
 	form.keepExtensions = true;
@@ -106,8 +142,7 @@ router.post('/uploadImg',function(req,res,next){
 			}
 		});
 	})
-})
-
+});
 
 module.exports = router;
 

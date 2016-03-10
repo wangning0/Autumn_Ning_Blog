@@ -33,6 +33,24 @@ module.exports = {
 			cb(err,docs);
 		})
 	},
+	checkUserInfo:function(infoObj,cb){
+		var User = dbModels.getModel('user');
+		this.findDoc(User,infoObj,function(err,doc){
+			if( err ){
+				cb('登陆验证失败'+err);
+			} else if (doc){
+				cb(null,doc);
+			} else {
+				cb('用户名／密码不存在');
+			}
+		})
+	},
+	/*register:function(infoObj,cb){
+		var User = dbModels.getModel('user');
+		this.createDoc(User,infoObj,function(err,doc){
+			console.log(doc);
+		})
+	},*/
 	saveImgUrl:function(info,cb){
 		var that = this;
 		var Img = dbModels.getModel('img');
