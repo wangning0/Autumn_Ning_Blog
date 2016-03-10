@@ -45,12 +45,12 @@ module.exports = {
 			}
 		})
 	},
-	/*register:function(infoObj,cb){
+	register:function(infoObj,cb){
 		var User = dbModels.getModel('user');
 		this.createDoc(User,infoObj,function(err,doc){
 			console.log(doc);
 		})
-	},*/
+	},
 	saveImgUrl:function(info,cb){
 		var that = this;
 		var Img = dbModels.getModel('img');
