@@ -22,7 +22,7 @@
 		<div class="mod_archive_item" ng-repeat="blogList in blogLists">
 			<div class="mod_archive_year" ng-bind="blogList[0].year"></div>
 			<ul class="mod_archive_list">
-				<li ng-repeat="blogInfo in blogList"><span class="triangle"></span><span class="time" ng-bind="blogInfo.time"></span> — <a ng-href="/blog/showBlog/{{blogInfo._id}}" ng-bind="blogInfo.title"></a><a ng-href="/blog/getOneArticle?id={{blogInfo._id}}" style="margin-left:4px;font-size:18px;color:blue;">修改</a><a ng-href="/blog/delete?id={{blogInfo._id}}" style="margin-left:4px;font-size:18px;color:red;">删除</a></li>
+				<li ng-repeat="blogInfo in blogList"><span class="triangle"></span><span class="time" ng-bind="blogInfo.time"></span> — <a ng-href="/blog/getOneArticle?id={{blogInfo._id}}" ng-bind="blogInfo.title"></a><a ng-href="/admin/modify?id={{blogInfo._id}}" style="margin-left:4px;font-size:18px;color:blue;">修改</a><a ng-href="/blog/delete?id={{blogInfo._id}}" style="margin-left:4px;font-size:18px;color:red;">删除</a></li>
 			</ul>
 		</div>
 	</div>

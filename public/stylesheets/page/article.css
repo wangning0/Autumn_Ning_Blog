@@ -1,0 +1,28 @@
+pre{
+	    padding: 10px;
+	    background: #fafafa;
+	    font: 12px / 18px Consolas, monospace, serif;
+	    color: #444444;
+	    -moz-tab-size: 4;
+	    tab-size: 4;
+	    overflow: auto;
+	    border: 1px solid #dddddd;
+	    border-radius: 3px;
+	    word-break: break-all;
+	    word-wrap: break-word;
+	    white-space: pre-wrap;
+}
+.mod_archive_item p{
+	width: auto;
+	margin: 0 auto;
+}
+.mod_archive_item img{
+	width: 400px;
+	height: 400px;
+}
+h1 ,h2 ,h3 ,h4{
+	margin-bottom: 10px;
+}
+p{
+	margin-bottom: 3px;
+}

@@ -12,7 +12,7 @@
 		.imgList{margin-bottom: 20px;}
 		.imgList div{display: inline-block; position: relative; margin-bottom: 30px;}
 		.imgList div img{width:180px;height: 200px;border:none;margin-left: 3px;text-align: center;display: inline-block;}
-		.imgList div span{position: absolute;font-size: 10px;left: 5px;bottom: -15px;}
+		.imgList div span{position: absolute;font-size: 10px;left: 5px;}
 	</style>
 </head>
 <body>
@@ -39,14 +39,14 @@
 				<p style="font-size:15px;">Title:<input type="text" placeholder="Title" ng-model="title" style="width:470px;height:30px;font-size:15px;padding:4px;border-radius:4px;outline:none;border:1px solid #DDDDE3; margin-right:3px;">标签:<input style="border-radius:4px;outline:none;border:1px solid #DDDDE3;font-size:15px;height:30px;padding:4px;" ng-model="tag" type="text"></p>
 				<textarea></textarea>
 			</div>
-			<button ng-click="submit()" style="float:right;width:50px;height:25px;">提交</button>
+			<button ng-click="submit()" style="float:right;width:50px;height:25px;">修改</button>
 		</div>
 	</div>
 	<div class="footer">
 		<p> Copyright ©2016 Crazy uncle Powered by <a href="https://github.com/wangning0">Autumn_Ning</a></p>
 	</div>
 	<script type="text/javascript" src="/javascripts/lib/angular.js"></script>
-	<script type="text/javascript" src="/javascripts/page/controllers/postArticle.js"></script>
+	<script type="text/javascript" src="/javascripts/page/controllers/modifyArticle.js"></script>
 	<script src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
 	<script src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
 	<script>

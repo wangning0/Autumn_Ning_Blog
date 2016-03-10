@@ -69,9 +69,10 @@ router.get('/getLifeArticle',function(req,res,next){
 	})
 });
 router.get('/blog/getOneArticle',function(req,res,next){
-	res.render('showArticle');
+	res.render('showArticle',{
+		admin:req.session.user
+	});
 });
-
 router.get('/blog/searchArticle', function(req, res, next) {
 	var articleId = req.query.id;
 	var infoObj = {
