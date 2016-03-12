@@ -289,7 +289,7 @@ webpack它能将依赖的模块转化成可以代表这些包的静态文件
 
 并且在`dist`文件夹内，多出了两个文件，一个`f1341ce5ea165e06ec3358441b52d5ea.png`（随机产生的名字）如果你想获得这个名字，可以将`require('./demo.png')`输出查看，以及还有`bundle.js`,比较图片前后的大小，
 
-![image](./demo1_4.png)![image](./image/demo1_5.png)
+![image](./image/demo1_4.png)![image](./image/demo1_5.png)
 
 可以发现，文件大小发生了改变。打开`bundle.js`你会发现该文件也被压缩了。是不是感觉很神奇？！
 还有一个比较好玩的插件[htmlwebpackplugin](https://webpack.github.io/docs/list-of-plugins.html#htmlwebpackplugin)可以点击这里看看，把上面的例子改变下哦。
