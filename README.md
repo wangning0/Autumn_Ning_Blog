@@ -6,4 +6,4 @@
 
 ##博文列表
 
-* 3-21 [webpack学习之旅](https://github.com/wangning0/Autumn_Ning_Blog)	
+* 3-21 [webpack学习之旅](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-12/webpack.md)	
