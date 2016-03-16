@@ -12,7 +12,7 @@
         render:function(){
           return <h1 className={this.props.class}>Hello {this.props.name}</h1>;
         }
-      });
+      	});
 * `this.props`对象的属性与组件的属性一一对应，但是`this.props.children`属性。表示组件的所有子节点
 * `this,props.children`，如果当前组件没有子节点的时候，他就是`underfined`;如果有一个子节点,数据类型为`object`,若是多个子节点,则数据类型为`array`.
 * `React`提供`React.Children`来处理`this.props.children`,可以用`React.Children.map`来便利子节点
