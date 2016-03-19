@@ -8,3 +8,5 @@
 
 * 3-12 [webpack学习之旅](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-12/webpack.md)	
 * 3-16 [react学习笔记](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-16/react_learn.md)
+
+* 3-19[好用的HTTP模块superagent](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-19/superAgent_learn.md)
