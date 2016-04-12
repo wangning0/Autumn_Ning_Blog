@@ -13,5 +13,5 @@
 
 * 3-21[webpack和react实战](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-21/react_webpack.md) 
 
-* 3-21[redux middleware 详解](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/4-12/redux_middleware详解.md) 
+* 4-12[redux middleware 详解](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/4-12/redux_middleware详解.md) 
 
