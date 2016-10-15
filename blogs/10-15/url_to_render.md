@@ -5,7 +5,8 @@
 ## 2. TCP三次握手
 
 浏览器与远程WEB服务器通过TCP三次握手来协商建立一个TCP/IP连接。该握手包括一个同步报文，一个同步-应答报文，一个应答报文。这三个报文在浏览器和服务器之间传递。该握手首先由客户端尝试建立通信，然后服务端响应回答并接受客户端的请求，最后由客户端发出该请求已经被接受的报文。
-    ![]()
+    ![](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/10-15/screenshot/5.png)
+
         
         ``
         ACK :ACK=1表示该报文段中有确认号需要处理
@@ -14,10 +15,8 @@
         ``
         **第一次握手:建立连接**
         客户端发送链接请求报文段，将SYN值设为1，Sequence Number设为x(客户端初始化序列号)。客户端进入SYN_SEND状态，等待服务器的确认。
-        ![]()
         **第二次握手：服务器收到SYN报文段**
         服务器受到客户端SYN报文段，需要对这个SYN报文段进行确认，设置Acknowledgemnt Number为x+1(Sequence Number+1,可以理解为告诉客户端下一次发送报文的序列号从x+1开始)。同时，自己还要发送SYN请求信息，将SYN值设为1，Sequence Number设为y(服务端的初始化序列号)。服务器端将上述所有信息放到一个报文段(即SYN+ACK报文段)中，一并发送到客户端，服务器进入SYN_RECV状态。
-        ![]()
         **第三次握手:客户端收到SYN+ACK报文段**
         客户端收到服务器的SYN+ACK报文段后将Acknowledgment Number设置为y+1，向服务器发送ACK报文段，这个报文段发送完毕之后，客户端和服务器都进入ESTABLISGED状态，完成TCP三次握手。
         
@@ -37,11 +36,11 @@
         
         DOM和CSSOM都是以Bytes->charcters->tokens->nodes->object model这样的方式生成最终的数据。DOM树的生成过程是一个深度遍历过程：当前节点的所有节点都构建好之后才回去构建当前节点的下一个兄弟节点。
         
-        ![]()
+        ![](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/10-15/screenshot/2.png)
         
         DOM Tree和CSS Rule Tree结合生成Render Tree
         
-        ![]()
+        ![](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/10-15/screenshot/1.png)
         
         
         ``
@@ -60,7 +59,7 @@
                         **但是**javascript可以根据DOM API操作DOM。比如JS修改了DOM或者CSS属性，也会重新的触发布局和渲染的执行过程。
                         
 ## 补充：TCP四处挥手
-                        ![]()
+                        ![](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/10-15/screenshot/6.png)
                         **第一次挥手：客户端想分手**
                         假设客户端想关闭连接，客户端会发送一个FIN标志位置为1的包(FIN=1,clientseq=x)，表示自己已经没有数据可以发送了，但是可以接受数据，进入FIN_WAIT_1状态
                         **第二次挥手：服务器也想分手**
@@ -71,3 +70,4 @@
                         客户端接受来自服务器端的请求后，发送一个确认包（ACK=1，ACKnum=serverseq+1）进入TIME_WAIT状态，等待可能出现的要求重传的ACK包。 
                         服务器端接受到这个确认包之后，关闭连接，进入CLOSED状态。
                         客户端等待2MSL之后，没有收到回复，确保服务器端确实为关闭了，客户端也关闭连接，进入CLOSED状态。
+
