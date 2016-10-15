@@ -18,26 +18,30 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
-app.engine('.html',ejs.__express);
+app.engine('.html', ejs.__express);
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
-  cookie:{maxAge:1000*60*10},
-  resave:true,
-  saveUninitialized:true,
-  secret:'blog',
-  key:'blog',
-  store:new MongoStore({
-    mongooseConnection:mongoose.connection
+  cookie: {
+    maxAge: 1000 * 60 * 10
+  },
+  resave: true,
+  saveUninitialized: true,
+  secret: 'blog',
+  key: 'blog',
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection
   })
 }));
 app.use('/', routes);
-app.use('/admin',admin);
+app.use('/admin', admin);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

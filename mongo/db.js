@@ -14,13 +14,13 @@ module.exports = {
 		})
 	},
 	checkRepeat: function(model, infoObj, cb) {
-		model.findOne(infoObj, function(err, doc) {
+		u.findOne(infoObj, function(err, doc) {
 			cb(err, doc);
 		})
 	},
 	createDoc: function(model, infoObj, cb) {
 		model.create(infoObj, function(err, doc) {
-			cb(err, doc);
+			Ucb(err, doc);
 		})
 	},
 	findDoc: function(model, infoObj, cb) {
