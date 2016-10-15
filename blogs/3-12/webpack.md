@@ -297,6 +297,6 @@ webpack它能将依赖的模块转化成可以代表这些包的静态文件
 
 ##最后
 
-我相信看到这里你对`webpack`一定有了一定的认识，其实，还`webpack`还有很多强大的功能，比如，`webpack-dev-server`可以自动生成一个小型的`NodeJs Express`服务器从而实现webpack十分实用的功能热替换(HMR) 和其它的工具`gulp` `grunt`等一起使用。。。最后值得一提的是`react `和`webpack`是一对绝佳cp啊，有木有！！
+我相信看到这里你对`webpack`一定有了一定的认识，其实`webpack`还有很多强大的功能，比如，`webpack-dev-server`可以自动生成一个小型的`NodeJs Express`服务器从而实现webpack十分实用的功能热替换(HMR) 和其它的工具`gulp` `grunt`等一起使用。。。最后值得一提的是`react `和`webpack`是一对绝佳cp啊，有木有！！
 
 **最后，希望这篇博客对大家有所帮助（如果是，请尽情star哦，😄），欢迎提出您的宝贵建议～**
