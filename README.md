@@ -18,3 +18,5 @@
 
 
 * 10-15[从输入URL到页面显示的过程](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/10-15/url_to_render.md)
+
+* 10-16[详解JS跨域问题](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/10-16/js_co.md)
