@@ -28,3 +28,4 @@
 ### 2016
 
 * 1-1 [postcss](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-1/postcss.md)
+* 1-1 [JS严格模式](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-1/strict_mode_js.md)
