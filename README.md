@@ -7,16 +7,16 @@
 
 ### 2015
 
-* 3-12 [webpack学习之旅](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-12/webpack.md)	
-* 3-16 [react学习笔记](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-16/react_learn.md)
+* 03-12 [webpack学习之旅](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-12/webpack.md)	
+* 03-16 [react学习笔记](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-16/react_learn.md)
 
-* 3-19[好用的HTTP模块superagent](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-19/superAgent_learn.md)
+* 03-19[好用的HTTP模块superagent](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-19/superAgent_learn.md)
 
-* 3-21[webpack和react实战](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-21/react_webpack.md) 
+* 03-21[webpack和react实战](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/3-21/react_webpack.md) 
 
-* 4-12[redux middleware 详解](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/4-12/redux_middleware详解.md) 
+* 04-12[redux middleware 详解](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/4-12/redux_middleware详解.md) 
 
-* 5-20[React-router路由实践](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/5-20/react-router路由实践.md)
+* 05-20[React-router路由实践](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/5-20/react-router路由实践.md)
 
 
 * 10-15[从输入URL到页面显示的过程](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/10-15/url_to_render.md)
@@ -27,5 +27,6 @@
 
 ### 2016
 
-* 1-1 [postcss](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-1/postcss.md)
-* 1-1 [JS严格模式](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-1/strict_mode_js.md)
+* 01-01 [postcss](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-1/postcss.md)
+* 01-01 [JS严格模式](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-1/strict_mode_js.md)
+* 01-03 [flux架构模式](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-3/flux/readme.md)
