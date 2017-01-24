@@ -18,7 +18,7 @@
     
     * dns解析器内部原理
     
-    ![dns解析器内部原理](../images/1.png)
+    ![dns解析器内部原理](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-24/images/1.png)
 
 
     * 什么是根域？
@@ -35,7 +35,7 @@
         ```
     * DNS服务器之间的查询操作
 
-    ![](../images/4.png)
+    ![](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-24/images/4.png)
 
     * 缓存？
         
@@ -46,11 +46,11 @@
         ```
 * 数据通过类似管道的结构来流动（TCP）
 
-    ![](../images/2.png)
+    ![](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-24/images/2.png)
 
 * 客户端和服务器之间收发数据操作的情形
     
-    ![](../images/3.png)
+    ![](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-24/images/3.png)
 
 * 能不能用前面创建套接字时提到的那个描述符来识别套接字呢？
 

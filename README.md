@@ -31,3 +31,5 @@
 * 01-01 [postcss](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-1/postcss.md)
 * 01-01 [JS严格模式](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-1/strict_mode_js.md)
 * 01-03 [flux架构模式](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-3/flux/readme.md)
+* 01-24 [网络是怎样连接的](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-24/readme.md)
+
