@@ -80,3 +80,34 @@ CORS与JSONP相比，更加的先进，方便和可靠
 2.使用CORS，开发者可以使用普通的XMLHttpRequest发起请求和获得数据，比起JSONP有更好的错误处理。
 3. JSONP主要被老的浏览器支持，它们往往不支持CORS，而绝大多数现代浏览器都已经支持了CORS）
 ```
+## webpack 
+可以通过webpack的proxy table解决跨域
+
+## node中间层
+webpack跨域原理就是通过node做中间层进行跨域
+## websocket 
+websocket 头信息
+```
+GET /chat HTTP/1.1
+Host: server.example.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==
+Sec-WebSocket-Protocol: chat, superchat
+Sec-WebSocket-Version: 13
+Origin: http://example.com
+```
+因为字段`origin`这个字段，所以websocket没有实行同源策略，因为服务器可以根据这个字段判断是否许可本次通信
+
+## document.domain
+只适合用于不同子域的网站的交互
+
+只能设置成自身或更高一级的父域，且主域相同
+
+## HTML5的postMessage
+跨域通信API，允许跨窗口通信，不论这两个窗口是否同源
+ 
+## window.name
+对于在同一窗口的生命周期内，窗口载入的所有页面都是共享一个window.name的，每个页面都对其可读可写
+
+
