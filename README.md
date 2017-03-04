@@ -34,5 +34,6 @@
 * 01-24 [网络是怎样连接的](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-1-24/readme.md)
 * 02-16 [Ajax](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-2-16/readme.md)
 * 02-16 [HTML5 API](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-2-16/h5.md)
+* 03-04 [转][stream流](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-3-4/stream.md)
 
 
