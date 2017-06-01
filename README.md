@@ -1,9 +1,10 @@
-#Autumn_Ning Blog
----
-##博客简单介绍
+# Autumn_Ning Blog
+
+## 博客简单介绍
 
 这是Autumn_Ning 的个人博客仓库所在地址，[BLOG](ning.bystudio.top) 博客内容将在[GitHub](https://github.com/wangning0/Autumn_Ning_Blog)和上线后的博客同时更新，希望大家能够彼此交流，有啥错误的或者建议欢迎和我联系哦～😄  开始更新
-##博文列表
+
+## 博文列表
 
 ### 2015
 
@@ -36,4 +37,4 @@
 * 02-16 [HTML5 API](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-2-16/h5.md)
 * 03-04 [转][stream流](https://github.com/wangning0/Autumn_Ning_Blog/blob/master/blogs/2016-3-4/stream.md)
 
-
+**后续文章将会在issue中发布**
