@@ -381,6 +381,7 @@ Route中components中接收的参数不仅仅只是实际的组件，还可以�
     const Page = (props) =>
       <div>
         <h1>{props.location.query.message || 'Hello'}</h1>
+        <Links>send message</Links>
       </div>
     
     const Links = () =>
