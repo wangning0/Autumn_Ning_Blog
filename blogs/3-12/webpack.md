@@ -226,7 +226,7 @@ webpack它能将依赖的模块转化成可以代表这些包的静态文件
 		<body>
 			<div>Hello,world</div>
 			<img src="./demo.png" alt="">
-			<script src="../dist/bundlle.js"></script>
+			<script src="../dist/bundle.js"></script>
 		</body>
 		</html>
 		
