@@ -2,7 +2,7 @@
 
 当自己在学习webpack的时候，在网上发现中文的很详细的教程很少，于是便想将自己学习webpack的笔记记录整理下来，便有了这篇文章，希望对大家有所帮助，如果有错误，欢迎大家指出。
 
-###在我们开始之前
+### 在我们开始之前
 
 * webpack有多种加载器(**Loader**,后面会介绍),可以处理各种需要被处理的静态文件
 * webpack支持**CommonJs** **AMD** **CMD**规范
@@ -95,7 +95,7 @@ webpack它能将依赖的模块转化成可以代表这些包的静态文件
 ##开启wbpack之旅
 -------
 
-###安装webpack
+### 安装webpack
 
 * 我们可以直接使用npm进行全局安装
 
@@ -106,7 +106,7 @@ webpack它能将依赖的模块转化成可以代表这些包的静态文件
 
 更详尽的安装方法个可以参考[webpack安装](https://webpack.github.io/docs/installation.html)
 
-###webpak命令行常见使用的操作
+### webpak命令行常见使用的操作
  
  启动
  
@@ -121,7 +121,7 @@ webpack它能将依赖的模块转化成可以代表这些包的静态文件
  	webpack --config customconfig.js
  
 
-##webpack的用法
+## webpack的用法
 ------
 
 首先先贴上一个比较完整的`webpack.config.js`的代码，再详细介绍：
@@ -201,7 +201,7 @@ webpack它能将依赖的模块转化成可以代表这些包的静态文件
  	
 讲到这里，我相信大家都会对wepback有了更深的认识，但是却十分的松散，不能把它们串起来，那接下来我就用几个小的demo来让大家梳理梳理起来
 
-###举个例子
+### 举个例子
 
 首先请大家建立一个和我一样文件结构的文件夹，在这里我也说明下这个demo大概要做的事情，就是将css文件都打包放到一个js文件，并且对图片解压，并且要对这个js文件进行自动压缩。
 
@@ -295,7 +295,7 @@ webpack它能将依赖的模块转化成可以代表这些包的静态文件
 还有一个比较好玩的插件[htmlwebpackplugin](https://webpack.github.io/docs/list-of-plugins.html#htmlwebpackplugin)可以点击这里看看，把上面的例子改变下哦。
 
 
-##最后
+## 最后
 
 我相信看到这里你对`webpack`一定有了一定的认识，其实`webpack`还有很多强大的功能，比如，`webpack-dev-server`可以自动生成一个小型的`NodeJs Express`服务器从而实现webpack十分实用的功能热替换(HMR) 和其它的工具`gulp` `grunt`等一起使用。。。最后值得一提的是`react `和`webpack`是一对绝佳cp啊，有木有！！
 
